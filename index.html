@@ -193,12 +193,17 @@
   .pday-list li::before{content:"";position:absolute;left:0;top:17px;width:7px;height:7px;background:var(--ink);}
 
   /* ---------- team ---------- */
-  .team{display:grid;grid-template-columns:240px 1fr;gap:clamp(24px,4vw,44px);align-items:center;}
-  @media(max-width:560px){.team{grid-template-columns:1fr;}}
+  .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(20px,3.5vw,40px);}
   .team-photo{aspect-ratio:4/5;}
-  .team h3{font-size:24px;}
-  .team .role{font-size:14px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2);margin:6px 0 14px;}
-  .team p{color:var(--ink-2);}
+  .team-card .team-photo{margin-bottom:20px;}
+  .team-card h3{font-size:23px;}
+  .team-card .role{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);margin:6px 0 12px;}
+  .team-card p{color:var(--ink-2);font-size:15px;}
+  .team-card .team-ig{
+    display:inline-block;margin-top:14px;font-size:13px;font-weight:700;
+    border-bottom:1.5px solid var(--ink);padding-bottom:2px;
+  }
+  .team-card .team-ig:hover{color:var(--ink-2);}
 
   /* ---------- gallery ---------- */
   .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;}
@@ -490,17 +495,29 @@
       <div class="eyebrow" data-i18n="team_eyebrow">Команда</div>
       <h2 data-i18n="team_h2">Хто веде філію</h2>
     </div>
-    <div class="team">
-      <div class="photo team-photo">
-        <img class="photo-img" src="images/team-olga.jpg" alt="" data-i18n-alt="team_photo" onerror="this.classList.add('img-missing')">
-        <span class="ptag" data-i18n="photo_tag">Фото</span>
-        <span class="pdesc" data-i18n="team_photo">Портрет Olga Duma — діловий стиль, нейтральний фон</span>
-      </div>
-      <div>
+    <div class="team-grid">
+      <article class="team-card">
+        <div class="photo team-photo">
+          <img class="photo-img" src="images/team-roman.jpg" alt="" data-i18n-alt="roman_photo" onerror="this.classList.add('img-missing')">
+          <span class="ptag" data-i18n="photo_tag">Фото</span>
+          <span class="pdesc" data-i18n="roman_photo">Портрет Roman Bizemigrant — діловий стиль, нейтральний фон</span>
+        </div>
+        <h3>Roman Bizemigrant</h3>
+        <div class="role" data-i18n="roman_role">Засновник філії</div>
+        <p data-i18n="roman_bio">Підприємець, 20 років у бізнесі. Член керуючої ради YBC і засновник філії в Бенілюксі — глибоко розуміє ДНК клубу та будує тут справжню бізнес-родину.</p>
+        <a class="team-ig" href="https://www.instagram.com/bizemigrant/" target="_blank" rel="noopener">@bizemigrant</a>
+      </article>
+      <article class="team-card">
+        <div class="photo team-photo">
+          <img class="photo-img" src="images/team-olga.jpg" alt="" data-i18n-alt="olga_photo" onerror="this.classList.add('img-missing')">
+          <span class="ptag" data-i18n="photo_tag">Фото</span>
+          <span class="pdesc" data-i18n="olga_photo">Портрет Olga Duma — діловий стиль, нейтральний фон</span>
+        </div>
         <h3>Olga Duma</h3>
-        <div class="role" data-i18n="team_role">CEO YBC Benelux</div>
-        <p data-i18n="team_bio">Керує запуском і розвитком філії в Бенілюксі — від спільноти учасників до офлайн-програми клубу.</p>
-      </div>
+        <div class="role" data-i18n="olga_role">CEO YBC Benelux</div>
+        <p data-i18n="olga_bio">Керує запуском і розвитком філії в Бенілюксі — від спільноти учасників до офлайн-програми клубу.</p>
+        <a class="team-ig" href="https://www.instagram.com/astro_duma/" target="_blank" rel="noopener">@astro_duma</a>
+      </article>
     </div>
   </div>
 </section>
@@ -647,7 +664,7 @@
         <h4 data-i18n="footer_contacts">Контакти</h4>
         <p>+352 ___ ___ ___</p>
         <p>benelux@ybc.club</p>
-        <a href="#" data-i18n="footer_social_ig">Instagram</a>
+        <a href="https://www.instagram.com/ybc_benelux/" target="_blank" rel="noopener" data-i18n="footer_social_ig">Instagram</a>
         <a href="#" data-i18n="footer_social_li">LinkedIn</a>
       </div>
     </div>
@@ -696,7 +713,8 @@ const I18N = {
     program_note:"Описи днів — робоча чернетка. Замініть на фінальну програму від організаторів.",
     day_word:"День", photo_tag:"Фото",
     hero_photo:"Головне фото: учасники YBC на бізнес-зустрічі — жива атмосфера спілкування",
-    team_photo:"Портрет Olga Duma — діловий стиль, нейтральний фон",
+    olga_photo:"Портрет Olga Duma — діловий стиль, нейтральний фон",
+    roman_photo:"Портрет Roman Bizemigrant — діловий стиль, нейтральний фон",
     d1_date:"30 липня 2026", d1_name:"FuckUp Night",
     d1_desc:"Неформальний вечір-знайомство. Підприємці чесно діляться провалами та уроками — формат, що швидко знімає бар'єри і зближує спільноту перед головним днем.",
     d1_p1:"Реальні історії провалів від підприємців", d1_p2:"Вільний нетворкінг у неформальній атмосфері", d1_p3:"Знайомство з командою та учасниками філії",
@@ -709,8 +727,11 @@ const I18N = {
     d3_desc:"Завершальний день у меншому колі — простір для глибших знайомств і спільних активностей. Формат уточнюється.",
     d3_p1:"Формат і активності — у процесі підтвердження",
     d3_photo:"Завершальний день: менше коло учасників, спільна активність або нетворкінг",
-    team_eyebrow:"Команда", team_h2:"Хто веде філію", team_role:"CEO YBC Benelux",
-    team_bio:"Керує запуском і розвитком філії в Бенілюксі — від спільноти учасників до офлайн-програми клубу.",
+    team_eyebrow:"Команда", team_h2:"Хто веде філію",
+    roman_role:"Засновник філії",
+    roman_bio:"Підприємець, 20 років у бізнесі. Член керуючої ради YBC і засновник філії в Бенілюксі — глибоко розуміє ДНК клубу та будує тут справжню бізнес-родину.",
+    olga_role:"CEO YBC Benelux",
+    olga_bio:"Керує запуском і розвитком філії в Бенілюксі — від спільноти учасників до офлайн-програми клубу.",
     gallery_eyebrow:"Спільнота", gallery_h2:"Як це виглядає",
     g1:"Бізнес-нетворкінг — учасники спілкуються, динаміка залу",
     g2:"Mastermind — невелика група за столом, робота над кейсом",
@@ -794,7 +815,8 @@ const I18N = {
     program_note:"Day descriptions are a working draft — replace with the final programme.",
     day_word:"Day", photo_tag:"Photo",
     hero_photo:"Hero image: YBC members at a business gathering — a lively scene of conversation",
-    team_photo:"Portrait of Olga Duma — business style, neutral background",
+    olga_photo:"Portrait of Olga Duma — business style, neutral background",
+    roman_photo:"Portrait of Roman Bizemigrant — business style, neutral background",
     d1_date:"30 July 2026", d1_name:"FuckUp Night",
     d1_desc:"An informal get-together evening. Entrepreneurs openly share failures and lessons — a format that quickly breaks the ice and brings the community together before the main day.",
     d1_p1:"Real failure stories from entrepreneurs", d1_p2:"Open networking in an informal setting", d1_p3:"Meeting the team and branch members",
@@ -807,8 +829,11 @@ const I18N = {
     d3_desc:"A closing day in a smaller circle — space for deeper connections and shared activities. The format is being confirmed.",
     d3_p1:"Format and activities — being confirmed",
     d3_photo:"Closing day: a smaller circle of members, a shared activity or networking",
-    team_eyebrow:"Team", team_h2:"Who leads the branch", team_role:"CEO YBC Benelux",
-    team_bio:"Leads the launch and growth of the Benelux branch — from the member community to the club's offline programme.",
+    team_eyebrow:"Team", team_h2:"Who leads the branch",
+    roman_role:"Branch founder",
+    roman_bio:"An entrepreneur with 20 years in business. A member of the YBC governing board and founder of the Benelux branch — he deeply understands the club's DNA and builds a real business family here.",
+    olga_role:"CEO YBC Benelux",
+    olga_bio:"Leads the launch and growth of the Benelux branch — from the member community to the club's offline programme.",
     gallery_eyebrow:"Community", gallery_h2:"What it looks like",
     g1:"Business networking — members in conversation, room energy",
     g2:"Mastermind — a small group at a table, working on a case",
