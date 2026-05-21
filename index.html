@@ -116,6 +116,8 @@
     border:1.5px solid currentColor;padding:5px 9px;
   }
   .photo .pdesc{font-size:12.5px;line-height:1.5;max-width:34ch;}
+  .photo .photo-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;}
+  .photo .photo-img.img-missing{display:none;}
 
   /* ---------- metrics ---------- */
   .metrics{
@@ -306,8 +308,9 @@
       </div>
     </div>
     <div class="photo hero-photo">
+      <img class="photo-img" src="images/hero.jpg" alt="" data-i18n-alt="hero_photo" onerror="this.classList.add('img-missing')">
       <span class="ptag" data-i18n="photo_tag">Фото</span>
-      <span class="pdesc" data-i18n="hero_photo">Головне фото: учасники YBC на бізнес-зустрічі — горизонтальний кадр, спілкування, енергія залу</span>
+      <span class="pdesc" data-i18n="hero_photo">Головне фото: учасники YBC на бізнес-зустрічі — жива атмосфера спілкування</span>
     </div>
   </div>
 </section>
@@ -429,6 +432,7 @@
     <div class="program">
       <article class="pday">
         <div class="photo pday-media">
+          <img class="photo-img" src="images/day-1.jpg" alt="" data-i18n-alt="d1_photo" onerror="this.classList.add('img-missing')">
           <span class="ptag" data-i18n="photo_tag">Фото</span>
           <span class="pdesc" data-i18n="d1_photo">Атмосфера FuckUp Night: спікер на сцені, увага залу, неформальне світло</span>
         </div>
@@ -445,6 +449,7 @@
       </article>
       <article class="pday">
         <div class="photo pday-media">
+          <img class="photo-img" src="images/day-2.jpg" alt="" data-i18n-alt="d2_photo" onerror="this.classList.add('img-missing')">
           <span class="ptag" data-i18n="photo_tag">Фото</span>
           <span class="pdesc" data-i18n="d2_photo">Головний день: зала, виступ спікера або урочистий момент запуску філії</span>
         </div>
@@ -461,6 +466,7 @@
       </article>
       <article class="pday">
         <div class="photo pday-media">
+          <img class="photo-img" src="images/day-3.jpg" alt="" data-i18n-alt="d3_photo" onerror="this.classList.add('img-missing')">
           <span class="ptag" data-i18n="photo_tag">Фото</span>
           <span class="pdesc" data-i18n="d3_photo">Завершальний день: менше коло учасників, спільна активність або нетворкінг</span>
         </div>
@@ -486,6 +492,7 @@
     </div>
     <div class="team">
       <div class="photo team-photo">
+        <img class="photo-img" src="images/team-olga.jpg" alt="" data-i18n-alt="team_photo" onerror="this.classList.add('img-missing')">
         <span class="ptag" data-i18n="photo_tag">Фото</span>
         <span class="pdesc" data-i18n="team_photo">Портрет Olga Duma — діловий стиль, нейтральний фон</span>
       </div>
@@ -506,12 +513,12 @@
       <h2 data-i18n="gallery_h2">Як це виглядає</h2>
     </div>
     <div class="gallery">
-      <div class="photo"><span class="ptag" data-i18n="photo_tag">Фото</span><span class="pdesc" data-i18n="g1">Бізнес-нетворкінг — учасники спілкуються, динаміка залу</span></div>
-      <div class="photo"><span class="ptag" data-i18n="photo_tag">Фото</span><span class="pdesc" data-i18n="g2">Mastermind — невелика група за столом, робота над кейсом</span></div>
-      <div class="photo"><span class="ptag" data-i18n="photo_tag">Фото</span><span class="pdesc" data-i18n="g3">Company visit — група на виробництві чи в офісі компанії</span></div>
-      <div class="photo"><span class="ptag" data-i18n="photo_tag">Фото</span><span class="pdesc" data-i18n="g4">Зустріч зі спікером — спікер на сцені, повний зал</span></div>
-      <div class="photo"><span class="ptag" data-i18n="photo_tag">Фото</span><span class="pdesc" data-i18n="g5">Яхтинг — учасники на яхті, море, неформальний відпочинок</span></div>
-      <div class="photo"><span class="ptag" data-i18n="photo_tag">Фото</span><span class="pdesc" data-i18n="g6">Урочистий вечір — святкова атмосфера, сцена, дрес-код</span></div>
+      <div class="photo"><img class="photo-img" src="images/gallery-1.jpg" alt="" data-i18n-alt="g1" onerror="this.classList.add('img-missing')"><span class="ptag" data-i18n="photo_tag">Фото</span><span class="pdesc" data-i18n="g1">Бізнес-нетворкінг — учасники спілкуються, динаміка залу</span></div>
+      <div class="photo"><img class="photo-img" src="images/gallery-2.jpg" alt="" data-i18n-alt="g2" onerror="this.classList.add('img-missing')"><span class="ptag" data-i18n="photo_tag">Фото</span><span class="pdesc" data-i18n="g2">Mastermind — невелика група за столом, робота над кейсом</span></div>
+      <div class="photo"><img class="photo-img" src="images/gallery-3.jpg" alt="" data-i18n-alt="g3" onerror="this.classList.add('img-missing')"><span class="ptag" data-i18n="photo_tag">Фото</span><span class="pdesc" data-i18n="g3">Company visit — група на виробництві чи в офісі компанії</span></div>
+      <div class="photo"><img class="photo-img" src="images/gallery-4.jpg" alt="" data-i18n-alt="g4" onerror="this.classList.add('img-missing')"><span class="ptag" data-i18n="photo_tag">Фото</span><span class="pdesc" data-i18n="g4">Зустріч зі спікером — спікер на сцені, повний зал</span></div>
+      <div class="photo"><img class="photo-img" src="images/gallery-5.jpg" alt="" data-i18n-alt="g5" onerror="this.classList.add('img-missing')"><span class="ptag" data-i18n="photo_tag">Фото</span><span class="pdesc" data-i18n="g5">Яхтинг — учасники на яхті, море, неформальний відпочинок</span></div>
+      <div class="photo"><img class="photo-img" src="images/gallery-6.jpg" alt="" data-i18n-alt="g6" onerror="this.classList.add('img-missing')"><span class="ptag" data-i18n="photo_tag">Фото</span><span class="pdesc" data-i18n="g6">Урочистий вечір — святкова атмосфера, сцена, дрес-код</span></div>
     </div>
   </div>
 </section>
@@ -611,7 +618,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-q"><span data-i18n="q4">Коли стартує філія?</span><span class="sign">+</span></button>
-        <div class="faq-a"><p data-i18n="a4">Офіційне відкриття — 26–28 червня 2026 в Люксембурзі. Але активності вже відбуваються: учасники беруть участь у зустрічах ще до повного запуску.</p></div>
+        <div class="faq-a"><p data-i18n="a4">Офіційне відкриття — 30 липня – 1 серпня 2026 в Люксембурзі. Але активності вже відбуваються: учасники беруть участь у зустрічах ще до повного запуску.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q"><span data-i18n="q5">Скільки подій буде щомісяця?</span><span class="sign">+</span></button>
@@ -688,7 +695,7 @@ const I18N = {
     program_head:"Програма трьох днів",
     program_note:"Описи днів — робоча чернетка. Замініть на фінальну програму від організаторів.",
     day_word:"День", photo_tag:"Фото",
-    hero_photo:"Головне фото: учасники YBC на бізнес-зустрічі — горизонтальний кадр, спілкування, енергія залу",
+    hero_photo:"Головне фото: учасники YBC на бізнес-зустрічі — жива атмосфера спілкування",
     team_photo:"Портрет Olga Duma — діловий стиль, нейтральний фон",
     d1_date:"30 липня 2026", d1_name:"FuckUp Night",
     d1_desc:"Неформальний вечір-знайомство. Підприємці чесно діляться провалами та уроками — формат, що швидко знімає бар'єри і зближує спільноту перед головним днем.",
@@ -786,7 +793,7 @@ const I18N = {
     program_head:"Three-day programme",
     program_note:"Day descriptions are a working draft — replace with the final programme.",
     day_word:"Day", photo_tag:"Photo",
-    hero_photo:"Hero image: YBC members at a business gathering — horizontal shot, conversation, room energy",
+    hero_photo:"Hero image: YBC members at a business gathering — a lively scene of conversation",
     team_photo:"Portrait of Olga Duma — business style, neutral background",
     d1_date:"30 July 2026", d1_name:"FuckUp Night",
     d1_desc:"An informal get-together evening. Entrepreneurs openly share failures and lessons — a format that quickly breaks the ice and brings the community together before the main day.",
@@ -858,6 +865,10 @@ function setLang(lang){
   document.querySelectorAll('[data-i18n-ph]').forEach(el=>{
     const v = dict[el.getAttribute('data-i18n-ph')];
     if(v!==undefined) el.placeholder = v;
+  });
+  document.querySelectorAll('[data-i18n-alt]').forEach(el=>{
+    const v = dict[el.getAttribute('data-i18n-alt')];
+    if(v!==undefined) el.alt = v;
   });
   document.querySelectorAll('.lang button').forEach(b=>{
     b.classList.toggle('active', b.dataset.lang===lang);
